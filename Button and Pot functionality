@@ -1,0 +1,110 @@
+//const int buttonPin2 = 15;
+const int buttonPin1 = 14;
+//led pins
+const int ledPin1 =  1;
+const int ledPin2 =  2;
+const int ledPin3 =  3;
+const int ledPin4 =  4;
+const int ledPin5 =  5;
+const int ledPin6 =  6;
+const int ledPin7 =  7;
+const int ledPin8 =  8;
+const int ledPin9 =  9;
+const int ledPin10 =  10;
+const int ledPin11 =  11;
+const int ledPin12 =  12;
+const int ledPin13 =  13;
+const int ledPin14 =  14;
+const int ledPin15 =  15;
+const int ledPin16 =  16;
+const int ledPin17 =  17;
+const int ledPin18 =  18;
+const int ledPin19 =  19;
+const int ledPin20 =  20;
+const int ledPin21 =  21;
+const int ledPin22 =  22;
+const int ledPin23 =  23;
+const int ledPin24 =  24;
+const int ledPin25 =  25;
+
+int buttonState1 = 0;
+int buttonState2 = 0;
+
+void setup() {
+
+  pinMode(25, OUTPUT);
+  pinMode(25, OUTPUT);
+  pinMode(24, OUTPUT);
+  pinMode(23, OUTPUT);
+  pinMode(22, OUTPUT);
+  pinMode(21, OUTPUT);
+  pinMode(20, OUTPUT);
+  pinMode(19, OUTPUT);
+  pinMode(18, OUTPUT);
+  pinMode(17, OUTPUT);
+  pinMode(16, OUTPUT);
+  pinMode(15, INPUT);
+  pinMode(14, INPUT);
+  pinMode(13, OUTPUT);
+  pinMode(12, OUTPUT);
+  pinMode(11, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(2, INPUT);
+  pinMode(1, INPUT);
+}
+
+void loop() {  
+//potentiometer funcionality
+  for (int fadeValue = 0 ; fadeValue <= 255; fadeValue += 5) {
+    analogWrite(ledPin1, 100);
+    analogWrite(ledPin4, 100);
+    analogWrite(ledPin8, 100);
+    analogWrite(ledPin12, 100);
+    analogWrite(ledPin16, 100);
+    analogWrite(ledPin20, 100);
+    analogWrite(ledPin24, 100);
+    delay(30);
+
+//button functionality
+    buttonState1 = digitalRead(14);
+
+    if (buttonState1 == HIGH) {
+      // turn LED on:
+      digitalWrite(ledPin1, HIGH);
+      digitalWrite(ledPin3, HIGH);
+      digitalWrite(ledPin5, HIGH);
+      digitalWrite(ledPin7, HIGH);
+      digitalWrite(ledPin9, HIGH);
+      digitalWrite(ledPin11, HIGH);
+      digitalWrite(ledPin13, HIGH);
+      digitalWrite(ledPin15, HIGH);
+      digitalWrite(ledPin17, HIGH);
+      digitalWrite(ledPin19, HIGH);
+      digitalWrite(ledPin21, HIGH);
+      digitalWrite(ledPin23, HIGH);
+      digitalWrite(ledPin25, HIGH);
+
+    }
+    buttonState2 = digitalRead(15);
+    if (buttonState2 == HIGH) {
+      digitalWrite(ledPin2, HIGH);
+      digitalWrite(ledPin4, HIGH);
+      digitalWrite(ledPin6, HIGH);
+      digitalWrite(ledPin8, HIGH);
+      digitalWrite(ledPin10, HIGH);
+      digitalWrite(ledPin12, HIGH);
+      digitalWrite(ledPin14, HIGH);
+      digitalWrite(ledPin16, HIGH);
+      digitalWrite(ledPin18, HIGH);
+      digitalWrite(ledPin20, HIGH);
+      digitalWrite(ledPin22, HIGH);
+      digitalWrite(ledPin24, HIGH);
+
+    }    }  }
