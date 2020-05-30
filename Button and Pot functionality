@@ -26,6 +26,7 @@ const int ledPin22 =  22;
 const int ledPin23 =  23;
 const int ledPin24 =  24;
 const int ledPin25 =  25;
+//I made a comment here for GitHub
 
 int buttonState1 = 0;
 int buttonState2 = 0;
